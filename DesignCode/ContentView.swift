@@ -13,6 +13,8 @@ struct ContentView: View {
     @State var show = false
     @State var viewState = CGSize.zero
     @State var showCard = false
+    @State var bottomState = CGSize.zero
+    @State var showFull = false
     
     var body: some View {
         ZStack {
@@ -44,7 +46,7 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.5))
             
             BackCardView()
-                 .frame(width: 340.0, height: 220.0)
+                .frame(width: 340.0, height: 220.0)
                 .background(show ? Color("card4") : Color("card3"))
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(radius: 20)
@@ -80,11 +82,38 @@ struct ContentView: View {
                 }
             )
             
+            Text("\(bottomState.height)")
+                .offset(y: -300)
+            
             BottomCardView()
                 .blur(radius: show ? 20 : 0)
                 .animation(.default)
                 .offset(y: showCard ? 360 : 1000)
+                .offset(y: bottomState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
+                .gesture(
+                    DragGesture().onChanged { value in
+                        self.bottomState = value.translation
+                        if self.showFull {
+                            self.bottomState.height += -300
+                        }
+                        if self.bottomState.height < -300 {
+                            self.bottomState.height = -300
+                        }
+                    }
+                    .onEnded { value in
+                        if self.bottomState.height > 50 {
+                            self.showCard = false
+                        }
+                        if (self.bottomState.height < -100 && !self.showFull) || (self.bottomState.height < -250 && self.showFull) {
+                            self.bottomState.height = -300
+                            self.showFull = true
+                        }else {
+                            self.bottomState = .zero
+                            self.showFull = false
+                        }
+                    }
+            )
         }
     }
 }
