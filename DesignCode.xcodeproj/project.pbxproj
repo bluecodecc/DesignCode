@@ -14,6 +14,7 @@
 		B8B28905240CF68B0065ACEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B28904240CF68B0065ACEB /* Preview Assets.xcassets */; };
 		B8B28908240CF68B0065ACEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B28906240CF68B0065ACEB /* LaunchScreen.storyboard */; };
 		B8B6A617241F6C270057E2D5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6A616241F6C270057E2D5 /* MenuView.swift */; };
+		B8B6A6192420C02C0057E2D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6A6182420C02C0057E2D5 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B8B28907240CF68B0065ACEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8B28909240CF68B0065ACEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8B6A616241F6C270057E2D5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		B8B6A6182420C02C0057E2D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B8B288FD240CF6890065ACEB /* SceneDelegate.swift */,
 				B8B288FF240CF6890065ACEB /* ContentView.swift */,
 				B8B6A616241F6C270057E2D5 /* MenuView.swift */,
+				B8B6A6182420C02C0057E2D5 /* HomeView.swift */,
 				B8B28901240CF68B0065ACEB /* Assets.xcassets */,
 				B8B28906240CF68B0065ACEB /* LaunchScreen.storyboard */,
 				B8B28909240CF68B0065ACEB /* Info.plist */,
@@ -152,6 +155,7 @@
 				B8B288FC240CF6890065ACEB /* AppDelegate.swift in Sources */,
 				B8B6A617241F6C270057E2D5 /* MenuView.swift in Sources */,
 				B8B288FE240CF6890065ACEB /* SceneDelegate.swift in Sources */,
+				B8B6A6192420C02C0057E2D5 /* HomeView.swift in Sources */,
 				B8B28900240CF6890065ACEB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
